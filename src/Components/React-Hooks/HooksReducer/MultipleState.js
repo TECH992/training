@@ -1,45 +1,35 @@
-import { useReducer } from "react"
-const reducer = (state, action) => {
+import React, { useState } from 'react'
 
-          if (action.type === "red") {
-                    return { color: action.color }
-          } else if (action.type === "blue") {
-                    return { color: action.color }
-          } else if (action.type === "green") {
-                    return { color: action.color }
-          } else if (action.type === "yellow") {
-                    return { color: action.color }
-          } else if (action.type === "sky") {
-                    return { color: action.color }
-          }
-
-}
-const MultipleStateIntoReducer = () => {
-          const [state, dispatch] = useReducer(reducer, { color: "#ffff" });
-          console.log(state.color)
+export const MultipleState = () => {
+          const [val, setVal] = useState()
+          const [red, setRed] = useState()
+          const [blue, setBlue] = useState()
+          const [green, setGreen] = useState()
+          const [yellow, setYellow] = useState()
+          const [sky, setSky] = useState()
           const handleChangeColor = (data) => {
-
+                    setVal(data)
                     if (data === "red") {
-                              dispatch({ type: "red", color: "#E21717" });
+                              setRed("#E21717")
                     } else if (data === "blue") {
-                              dispatch({ type: "blue", color: "#1B98F5" });
+                              setBlue("#1B98F5")
                     }
                     else if (data === "green") {
-                              dispatch({ type: "green", color: "#3DBE29" });
+                              setGreen("#3DBE29")
                     }
                     else if (data === "yellow") {
-                              dispatch({ type: "yellow", color: "#EDC126" });
+                              setYellow("#EDC126")
                     }
                     else if (data === "sky") {
-                              dispatch({ type: "sky", color: "-[#03C6C7" });
+                              setSky("#03C6C7")
                     }
           }
-
+          let color = val === "red" ? red : val === "blue" ? blue : val === "green" ? green : val === "yellow" ? yellow : val === "sky" ? sky : "#FFFFFF";
           return (
                     <div>
-                              <h1 className='text-[24px] text-[#FFFFFF] py-4 font-sans font-bold' style={{ backgroundColor: `${state.color}` }}>Changing color with useReducer Hooks</h1>
+                              <h1 className='text-[24px] text-[#FFFFFF] py-4 font-sans font-bold' style={{ backgroundColor: `${color}` }}>Changing color with Multiple useState Hooks</h1>
                               <div className="flex flex-row justify-center">
-                                        <div className=" w-[30%]  border-[4px] border-[#FF6666] mt-8 p-32" style={{ backgroundColor: `${state.color}` }}></div>
+                                        <div className=" w-[30%]  border-[4px] border-[#FF6666] mt-8 p-32" style={{ backgroundColor: `${color}` }}></div>
                               </div>
                               <div className="flex flex-row justify-center mt-8">
                                         <button className="w-[50px] bg-[#E21717] text-[13px] text-[#fff]" onClick={() => handleChangeColor("red")}>Red</button>
@@ -52,5 +42,3 @@ const MultipleStateIntoReducer = () => {
                     </div>
           )
 }
-
-export default MultipleStateIntoReducer

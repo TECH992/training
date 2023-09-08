@@ -4,15 +4,10 @@ import Mountex from "../../image/Mountex.png"
 import Mounts from "../../image/Mount.png"
 
 export default function Mount() {
-  
   const [count, setCount] = useState(0);
-  /// 
-
   useEffect(() => {
-    console.log("ji");
     setCount(count + 1);
   }, []);
-
   return (
     <div>
       <h1 className="bg-[#FF6666] text-[28px] text-[#fff] font-bold">Functional Mount LifeCycle Method</h1>

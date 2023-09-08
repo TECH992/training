@@ -20,7 +20,7 @@ export default function HooksReducer() {
   return (
     <>
       <button
-      className="bg-[#35BDD0]"
+        className="bg-[#35BDD0]"
         onClick={() => {
           dispatch({ type: "incremented_age" });
         }}
@@ -28,7 +28,7 @@ export default function HooksReducer() {
         Increment age
       </button>
       <button
-      className="bg-[#E21717]"
+        className="bg-[#E21717]"
         onClick={() => {
           dispatch({ type: "decrement_age" });
         }}

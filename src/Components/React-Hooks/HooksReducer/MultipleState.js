@@ -22,6 +22,8 @@ export const MultipleState = () => {
                     }
                     else if (data === "sky") {
                               setSky("#03C6C7")
+                    } else {
+
                     }
           }
           let color = val === "red" ? red : val === "blue" ? blue : val === "green" ? green : val === "yellow" ? yellow : val === "sky" ? sky : "#FFFFFF";

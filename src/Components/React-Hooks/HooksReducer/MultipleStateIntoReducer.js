@@ -12,6 +12,9 @@ const reducer = (state, action) => {
           } else if (action.type === "sky") {
                     return { color: action.color }
           }
+          else {
+                    return state.color
+          }
 
 }
 const MultipleStateIntoReducer = () => {
@@ -31,7 +34,7 @@ const MultipleStateIntoReducer = () => {
                               dispatch({ type: "yellow", color: "#EDC126" });
                     }
                     else if (data === "sky") {
-                              dispatch({ type: "sky", color: "-[#03C6C7" });
+                              dispatch({ type: "sky", color: "#03C6C7" });
                     }
           }
 

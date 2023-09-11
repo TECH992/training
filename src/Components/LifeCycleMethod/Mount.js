@@ -3,11 +3,12 @@ import { useState, useEffect } from "react";
 import Mountex from "../../image/Mountex.png"
 import Mounts from "../../image/Mount.png"
 
-export default function Mount() {
-  const [count, setCount] = useState(0);
+export default function Mount() {  const [count, setCount] = useState(0);
   useEffect(() => {
     setCount(count + 1);
   }, []);
+ 
+  
   return (
     <div>
       <h1 className="bg-[#FF6666] text-[28px] text-[#fff] font-bold">Functional Mount LifeCycle Method</h1>

@@ -7,9 +7,7 @@ export default function Mount() {  const [count, setCount] = useState(0);
   useEffect(() => {
     setCount(count + 1);
   }, []);
- 
-  
-  return (
+     return (
     <div>
       <h1 className="bg-[#FF6666] text-[28px] text-[#fff] font-bold">Functional Mount LifeCycle Method</h1>
       <p className="text-[20px] text-[rgb(222,51,171)] font-sans font-bold">Explanation:<span className="text-[20px] text-[#242B2E]">what componentDidMount is doing in class based component same thing doing useEffect with empty dependency is doing. componentDidMount getting called just after render function or component is getting mounted into dom. same way useEffect with empty dependency get called just after return function or component is getting mounted into dom. mostly we are using this mount method to call api.</span></p>

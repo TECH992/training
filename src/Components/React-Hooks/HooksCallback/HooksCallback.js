@@ -7,11 +7,11 @@ const HooksCallback = (props) => {
           const [value, setValue] = useState()
           const [add, setAdd] = useState([])
           const [state, setState] = React.useState(false);
+
           const handleChange = useCallback((event) => {
                     let data = event.target.value
                     setValue(data)
           }, [])
-
 
           const handleAddData = useCallback(() => {
                     setAdd((prevState) => {
@@ -19,7 +19,9 @@ const HooksCallback = (props) => {
                     })
           }, [value])
           console.log('hiP');
+
           let Explanation = " when a component re-renders, every function inside of the component is recreated and therefore these functions’ references change between renders.every time reinitialize the function become the performance issue of the application.Fixing this issue useCallback got introduce."
+          
           const statehanddler = () => {
                     setState(!state);
           };

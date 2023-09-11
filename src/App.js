@@ -1,6 +1,7 @@
 import "./App.css";
+import HooksCallback  from "./Components/React-Hooks/HooksCallback/HooksCallback";
 //import { MultipleState } from "./Components/React-Hooks/HooksReducer/MultipleState";
-import MultipleStateIntoReducer from "./Components/React-Hooks/HooksReducer/MultipleStateIntoReducer";
+//import MultipleStateIntoReducer from "./Components/React-Hooks/HooksReducer/MultipleStateIntoReducer";
 // import Unmount from "./Components/LifeCycleMethod/Unmount";
 // import Mount from "./Components/LifeCycleMethod/Mount";
 // import { HooksEffect } from "./Components/React-Hooks/HooksEffect";
@@ -16,7 +17,8 @@ function App() {
       {/* <Mount/> */}
       {/* <Unmount/> */}
       {/* <Update/> */}
-      <MultipleStateIntoReducer/>
+      {/* <MultipleStateIntoReducer/> */}
+      <HooksCallback/>
       {/* <MultipleState /> */}
     </div>
   );

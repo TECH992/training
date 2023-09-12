@@ -36,4 +36,4 @@ function App() {
 }
 
 export default App;
-export{firstName,lastName}
+export{firstName,lastName}  

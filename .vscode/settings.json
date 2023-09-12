@@ -20,5 +20,8 @@
                     "titleBar.inactiveBackground": "#03c6c799",
                     "titleBar.inactiveForeground": "#15202b99"
           },
-          "peacock.color": "#03C6C7"
+          "peacock.color": "#03C6C7",
+          "cSpell.words": [
+                    "webfonts"
+          ]
 }

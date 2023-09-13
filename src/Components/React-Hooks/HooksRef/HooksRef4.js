@@ -4,7 +4,8 @@ export const HooksRef4 = () => {
           const inputText = useRef();
 
           const inputEvent = () => {
-                    console.log(inputText.current.value); // Access the value property of the ref to get the input value
+                    //console.log(e.target.value)
+                   console.log(inputText.current.value); // Access the value property of the ref to get the input value
           };
 
           return (

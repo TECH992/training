@@ -1,9 +1,9 @@
 import React, { memo } from 'react'
 
 const Child = (props) => {
-          console.log(props)
+          // console.log(props)
           let arrData = props.data
-          console.log("hii")
+          // console.log("hii")
 
 const deleteData=(data)=>{
  props.valueDelete(data)

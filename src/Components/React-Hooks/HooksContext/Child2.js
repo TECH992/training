@@ -1,14 +1,18 @@
 import React, { useContext } from 'react'
-import { lastName, firstName } from "../../../App"
+import { lastName, user } from "../../../App"
 const Child2 = () => {
           // const lName = useContext(lastName)
-          const data = useContext(firstName)
-          //console.log('',data);
+          const data = useContext(user)
+          //console.log('', data);
+          const dataValue = data && data.data.map((item, index) => {
+                    return item.attributes
+          })
+          //console.log(dataValue)
           //const first = useContext(second)
           return (
                     <div>
                               {/* <h1 className='text-[28px] text-[#0D0D0D] font-bold'>Fetching data using useContext: {lName}</h1> */}
-                              {data && data.map((item, index) => {
+                              {dataValue && dataValue.map((item, index) => {
                                         return (
                                                   <div>
                                                             <h1 className='text-[28px] text-[#0D0D0D] font-bold'>Fetching data using useContext: {item.title}</h1>

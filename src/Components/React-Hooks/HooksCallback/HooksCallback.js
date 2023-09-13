@@ -18,7 +18,7 @@ const HooksCallback = (props) => {
                               return [...prevState, value]
                     })
           }, [value])
-          console.log('hiP');
+          console.log('component re-render');
 
           let Explanation = " when a component re-renders, every function inside of the component is recreated and therefore these functions’ references change between renders.every time reinitialize the function become the performance issue of the application.Fixing this issue useCallback got introduce."
           

@@ -8,5 +8,10 @@ export const HooksRef2 = () => {
           }
 
           console.log('Component is rendered')
-          return <button onClick={handleClick}>Click the button!</button>
+          return (
+                    <div>
+                              <h1>{` Number of times the button is clicked: ${countClick.current}`}</h1>
+                              <button onClick={handleClick}>Click the button!</button>
+                    </div>
+          )
 }

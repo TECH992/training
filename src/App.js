@@ -10,15 +10,20 @@ import "./App.css";
 //import Update from "./Components/LifeCycleMethod/Update";
 import React from "react"
 //import { HooksRef } from "./Components/React-Hooks/HooksRef/HooksRef";
-import { HooksRef2 } from "./Components/React-Hooks/HooksRef/HooksRef2";
-import { HooksRef4 } from "./Components/React-Hooks/HooksRef/HooksRef4";
+//import { HooksRef2 } from "./Components/React-Hooks/HooksRef/HooksRef2";
+//import { HooksRef4 } from "./Components/React-Hooks/HooksRef/HooksRef4";
 //import { HooksRef3 } from "./Components/React-Hooks/HooksRef/HooksRef3";
-//import { HooksContext } from "./Components/React-Hooks/HooksContext/HooksContext";
+import { HooksContext } from "./Components/React-Hooks/HooksContext/HooksContext";
 //import HooksRef1 from "./Components/React-Hooks/HooksRef/HooksRef1";
 //import {firstName,lastName} from "./Context"
-//const firstName = React.createContext()
-//const lastName = React.createContext()
+import jsonData from "./data.json"
+const firstName = React.createContext()
+const lastName = React.createContext()
 function App() {
+  const data = jsonData&& jsonData.data.map((item, index) => {
+  return item.attributes
+  })
+  console.log(data)
   return (
     <div className="App">
       {/* <HooksEffect/> */}
@@ -30,19 +35,19 @@ function App() {
       {/* <MultipleStateIntoReducer/> */}
       {/* <HooksCallback/> */}
       {/* <MultipleState /> */}
-      {/* <firstName.Provider value={"Deepesh"}>
+      <firstName.Provider value={data}>
         <lastName.Provider value={"Kumar"}>
           <HooksContext />
         </lastName.Provider>
-      </firstName.Provider> */}
+      </firstName.Provider>
       {/* <HooksRef1/> */}
       {/* <HooksRef/> */}
      {/* ? */}
       {/* <HooksRef3 /> */}
-      <HooksRef4/>
+      {/* <HooksRef4/> */}
     </div>
   );
 }
 
 export default App;
-//export{firstName,lastName}  
+export{firstName,lastName}  

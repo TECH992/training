@@ -1,7 +1,21 @@
-import React from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 export const HooksRef = () => {
+  const [inputTextValue, setInputTextValue] = useState('')
+  const previousValue = useRef('')
+  useEffect(() => {
+    previousValue.current = inputTextValue
+  }, [inputTextValue])
   return (
-    <div>HooksRef</div>
+    <>
+      <input
+        type="text"
+        value={inputTextValue}
+        onChange={(e) => setInputTextValue(e.target.value)}
+        placeholder="Enter Your Full Name"
+      />
+      <h2>Current Value: {inputTextValue}</h2>
+      <h2>Previous Value: {previousValue.current}</h2>
+    </>
   )
 }

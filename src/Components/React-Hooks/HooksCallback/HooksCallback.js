@@ -12,7 +12,7 @@ const HooksCallback = (props) => {
                     let data = event.target.value
                     setValue(data)
           }, [])
-         
+
           const handleAddData = useCallback(() => {
                     setAdd((prevState) => {
                               return [...prevState, value]
@@ -21,12 +21,12 @@ const HooksCallback = (props) => {
           console.log('component re-render');
 
           let Explanation = " when a component re-renders, every function inside of the component is recreated and therefore these functions’ references change between renders.every time reinitialize the function become the performance issue of the application.Fixing this issue useCallback got introduce."
-          
+
           const statehanddler = () => {
                     setState(!state);
           };
 
-          const dataDelete=()=>{
+          const dataDelete = () => {
                     alert("hi")
           }
           return (
@@ -47,7 +47,7 @@ const HooksCallback = (props) => {
                                         <div>
                                                   <h2 className='text-[24px] text-[#3DBE29] py-4 font-sans font-bold'>To-Do-App</h2>
                                                   <button onClick={statehanddler} className='border-[4px] rounded-[50%] border-[#120E43] p-4 text-[24px] text-[#FFFFFF] font-bold bg-[#02B290] hover:bg-[#EDC126]'>Parent-render</button>
-                                                  <Child inputData={handleChange} addData={handleAddData} data={add } valueDelete={dataDelete}/>
+                                                  <Child inputData={handleChange} addData={handleAddData} data={add} valueDelete={dataDelete} />
                                         </div>
 
                               </div>

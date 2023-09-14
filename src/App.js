@@ -1,4 +1,6 @@
 import "./App.css";
+//import Counter from "./Components/React-Hooks/CustomHooks/Counter";
+import Todo from "./Components/React-Hooks/CustomHooks/Todo";
 //import { HooksRef2 } from "./Components/React-Hooks/HooksRef/HooksRef2";
 //import HooksCallback  from "./Components/React-Hooks/HooksCallback/HooksCallback";
 //import { MultipleState } from "./Components/React-Hooks/HooksReducer/MultipleState";
@@ -7,7 +9,7 @@ import "./App.css";
 // import Mount from "./Components/LifeCycleMethod/Mount";
 // import { HooksEffect } from "./Components/React-Hooks/HooksEffect";
 //import HooksReducer from "./Components/React-Hooks/HooksReducer/HooksReducer"
- import StateProps from "./Components/Parent/StateProps"
+//import StateProps from "./Components/Parent/StateProps"
 //import Update from "./Components/LifeCycleMethod/Update";
 //import React, {createContext } from "react"
 //import { HooksRef } from "./Components/React-Hooks/HooksRef/HooksRef";
@@ -16,6 +18,7 @@ import "./App.css";
 //import { HooksRef3 } from "./Components/React-Hooks/HooksRef/HooksRef3";
 //import { HooksContext } from "./Components/React-Hooks/HooksContext/HooksContext";
 //import HooksRef1 from "./Components/React-Hooks/HooksRef/HooksRef1";
+
 //import {firstName,lastName} from "./Context"
 // import jsonData from "./data.json"
 // const user = createContext()
@@ -29,7 +32,7 @@ function App() {
     <div className="App">
       {/* <HooksEffect/> */}
       {/* <HooksReducer/> */}
-      <StateProps/>
+      {/* <StateProps/> */}
       {/* <Mount/> */}
       {/* <Unmount/> */}
       {/* <Update/> */}
@@ -43,9 +46,11 @@ function App() {
       </user.Provider> */}
       {/* <HooksRef1/> */}
       {/* <HooksRef/> */}
-     {/* <HooksRef2/> */}
+      {/* <HooksRef2/> */}
       {/* <HooksRef3 /> */}
       {/* <HooksRef4/> */}
+      {/* <Counter /> */}
+      <Todo/>
     </div>
   );
 }

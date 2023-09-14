@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function useIncrement(initialValue = 0) {
+const useIncrement=(initialValue = 0)=> {
   const [count, setCount] = useState(initialValue);
 
   const increment = () => {

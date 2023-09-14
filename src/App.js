@@ -1,6 +1,8 @@
 import "./App.css";
+import Button from "./Components/React-Hooks/CustomHooks/Button";
+import { Data } from "./Components/React-Hooks/CustomHooks/Data";
 //import Counter from "./Components/React-Hooks/CustomHooks/Counter";
-import Todo from "./Components/React-Hooks/CustomHooks/Todo";
+//import Todo from "./Components/React-Hooks/CustomHooks/Todo";
 //import { HooksRef2 } from "./Components/React-Hooks/HooksRef/HooksRef2";
 //import HooksCallback  from "./Components/React-Hooks/HooksCallback/HooksCallback";
 //import { MultipleState } from "./Components/React-Hooks/HooksReducer/MultipleState";
@@ -50,7 +52,9 @@ function App() {
       {/* <HooksRef3 /> */}
       {/* <HooksRef4/> */}
       {/* <Counter /> */}
-      <Todo/>
+      {/* <Todo/> */}
+      {/* <Data/> */}
+      <Button/>
     </div>
   );
 }

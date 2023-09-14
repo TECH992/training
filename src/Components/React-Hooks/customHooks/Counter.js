@@ -2,6 +2,8 @@ import React from 'react'
 import useIncrement from './useIncrement'
 const Counter = () => {
       let counter = useIncrement(0)
+      console.log(counter.increment)
+      
       return (
             <div>
                   <h1 className="text-[#fff] text-[24px] font-bold bg-[#171ae2] py-2">Custom-Hooks</h1>

@@ -19,7 +19,7 @@ const reducer = (state, action) => {
 }
 const MultipleStateIntoReducer = () => {
           const [state, dispatch] = useReducer(reducer, { color: "#ffff" });
-          console.log(state.color)
+         
           const handleChangeColor = (data) => {
 
                     if (data === "red") {

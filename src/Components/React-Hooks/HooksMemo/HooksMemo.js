@@ -1,60 +1,40 @@
-import React, { useState, useCallback, useMemo } from 'react'
-import Child from './Child'
-import callbackImg from "../../../image/callback.png"
-import callbacksyntax from "../../../image/callbackSyntax.png"
+import React from "react";
+import { useState, useMemo } from "react";
 
-const HooksMemo = (props) => {
-  const [value, setValue] = useState()
-  const [add, setAdd] = useState([])
+export default function HooksMemo() {
+  const [count, setCount] = useState(0);
+  const [calculation, setCalculation] = useState(0);
 
-  const [state, setState] = React.useState(false);
-
-  const handleChange = useCallback((event) => {
-    let data = event.target.value
-    setValue(data)
-  }, [])
-
-  const handleAddData = useCallback(() => {
-    setAdd((prevState) => {
-      return [...prevState, value]
-    })
-  }, [value])
-  console.log('hiP');
-  const data = useMemo(() => [add]);
-  let Explanation = " when a component re-renders, every function inside of the component is recreated and therefore these functions’ references change between renders.every time reinitialize the function become the performance issue of the application.Fixing this issue useCallback got introduce."
+  useMemo(() => {
+    alert("hi")
+    setCalculation(() => count * 2);
+  }, [count]);
 
   const statehanddler = () => {
     setState(!state);
   };
+  console.log("component re-render")
+  const [state, setState] = React.useState(false);
+  let Explanation = " when a component re-renders, every value inside of the component is recreated and therefore these value’ references change between renders.every time reinitialize the value become the performance issue of the application.Fixing this issue useMemo got introduce."
 
-  const dataDelete = () => {
-    alert("hi")
-  }
   return (
-    <div >
-      <h1 className='text-[24px] text-[#FFFFFF] py-4 font-sans font-bold bg-[#D9D55B]' >To-Do-App using HooksCallback</h1>
-      <p className="text-[20px] text-[rgb(222,51,171)] font-sans font-bold">Explanation:
-        <span className="text-[20px] text-[#242B2E]">{Explanation}
-        </span>
-      </p>
-      <div className="flex flex-row justify-center mt-4">
-        <img src={callbackImg} alt="callback" className='bg-[#E03B8B]' />
-      </div>
-      <p className="text-[20px] text-[rgb(222,51,171)] font-sans font-bold flex flex-row justify-center">Syntax:
-        <img src={callbacksyntax} alt="callbacksyntax" className="px-4" />
-      </p>
-      <div className='mt-16 flex flex-row justify-center'>
-        <p className="text-[20px] text-[rgb(222,51,171)] font-sans font-bold  py-4">Example</p>
-        <div>
-          <h2 className='text-[24px] text-[#3DBE29] py-4 font-sans font-bold'>To-Do-App</h2>
-          <button onClick={statehanddler} className='border-[4px] rounded-[50%] border-[#120E43] p-4 text-[24px] text-[#FFFFFF] font-bold bg-[#02B290] hover:bg-[#EDC126]'>Parent-render</button>
-          <Child inputData={handleChange} addData={handleAddData} data={add} valueDelete={dataDelete} />
+    <div>
+      <h1 className="bg-[#FF6666] text-[28px] text-[#fff] font-bold">Stooping Rerender  value using useMemo</h1>
+      <p className="text-[20px] text-[rgb(222,51,171)] font-sans font-bold">Explanation:<span className="text-[20px] text-[#242B2E]"> </span>{Explanation}</p>
+
+      <div className="flex flex-row justify-center">
+        <p className="text-[20px] text-[rgb(222,51,171)] font-sans font-bold">  Output:</p>
+
+        <div >
+
+          <p className="text-[20px] text-[#6A1B4D] font-sans font-bold">Count: {count}</p>
+          <button onClick={() => setCount((c) => c + 1)} className="border-[2px] border-[#ff6666] p-4 bg-[#03C6C7]">+</button>
+          <p className="text-[20px] text-[#6A1B4D] font-sans font-bold">Calculation: {calculation}</p>
         </div>
 
+        <button onClick={statehanddler} className='border-[4px] rounded-[50%] border-[#120E43] p-4 text-[24px] text-[#FFFFFF] font-bold bg-[#02B290] hover:bg-[#EDC126]'>Parent-render</button>
       </div>
+
     </div>
-
-  )
+  );
 }
-
-export default HooksMemo;

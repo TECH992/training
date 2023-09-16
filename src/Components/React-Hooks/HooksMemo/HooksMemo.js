@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useMemo } from "react";
-
+import logger from "../../../logger"
 export default function HooksMemo() {
   const [count, setCount] = useState(0);
   const [calculation, setCalculation] = useState(0);
@@ -13,7 +13,7 @@ export default function HooksMemo() {
   const statehanddler = () => {
     setState(!state);
   };
-  console.log("component re-render")
+ logger("component re-render")
   const [state, setState] = React.useState(false);
   let Explanation = " when a component re-renders, every value inside of the component is recreated and therefore these value’ references change between renders.every time reinitialize the value become the performance issue of the application.Fixing this issue useMemo got introduce."
 

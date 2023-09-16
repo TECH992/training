@@ -1,9 +1,9 @@
 import React from 'react'
 import { NavBar } from '../Components/NavBar/NavBar'
-
+import{ logger} from "../logger"
 const About = () => {
           
-          
+          logger("component re-render")
           return (
                     <div>
                               <NavBar />

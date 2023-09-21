@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 
-export const HooksRef4 = () => {
+ const HooksRef4 = () => {
           const inputText = useRef();
 
           const inputEvent = () => {
@@ -19,3 +19,5 @@ export const HooksRef4 = () => {
                     </div>
           );
 };
+
+export default HooksRef4;

@@ -1,6 +1,8 @@
 import React from 'react'
 import { NavBar } from '../Components/NavBar/NavBar'
-const ContactPage = () => {
+const ContactPage = (props) => {
+console.log(props)
+         
           return (
                     <div> <div>
                               <NavBar />

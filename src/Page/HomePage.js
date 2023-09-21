@@ -1,7 +1,8 @@
 import React from 'react'
 import { NavBar } from '../Components/NavBar/NavBar'
 
-const HomePage = () => {
+const HomePage = (props) => {
+console.log(props)
           return (
                     <div>
                               <NavBar />

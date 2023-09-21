@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRef } from 'react'
-export const HooksRef2 = () => {
+const HooksRef2 = () => {
           const countClick = useRef(0)
           const handleClick = () => {
                     countClick.current++
@@ -15,3 +15,5 @@ export const HooksRef2 = () => {
                     </div>
           )
 }
+
+export default HooksRef2

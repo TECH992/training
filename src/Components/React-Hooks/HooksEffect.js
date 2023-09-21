@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
-export const HooksEffect = () => {
+export const HooksEffect = ({apiData,data}) => {
+
   const [count, setCount] = useState(0)
 
   useEffect(() => {
@@ -8,6 +9,6 @@ export const HooksEffect = () => {
 
   }, [])
   return (
-    <div>{count}</div>
+    <div>{data}</div>
   )
 }

@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-export const HooksRef3 = () => {
+ const HooksRef3 = () => {
   //creating a ref
   const inputText = useRef()
 
@@ -15,4 +15,4 @@ export const HooksRef3 = () => {
   )
 }
 
-
+export default HooksRef3

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 
-export const HooksRef = () => {
+ const HooksRef = () => {
   const [inputTextValue, setInputTextValue] = useState('')
   const previousValue = useRef('')
   useEffect(() => {
@@ -19,3 +19,4 @@ export const HooksRef = () => {
     </>
   )
 }
+export default HooksRef

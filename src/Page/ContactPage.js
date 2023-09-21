@@ -1,7 +1,9 @@
 import React from 'react'
 import { NavBar } from '../Components/NavBar/NavBar'
-const ContactPage = (props) => {
-console.log(props)
+import { useLocation } from 'react-router-dom'
+const ContactPage = () => {
+          const location = useLocation()
+console.log(location)
          
           return (
                     <div> <div>

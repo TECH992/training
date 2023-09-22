@@ -16,7 +16,7 @@ import dataJson from "../data.json"
 import Counter from '../Components/State-Props/Counter';
 import Todo from "../Components/React-Hooks/customHooks/Todo";
 import Button from "../Components/React-Hooks/customHooks/Button";
-import Data from '../Components/State-Props/Data';
+import Data from '../Components/React-Hooks/customHooks/Data';
 import HooksMemo from "../Components/React-Hooks/HooksMemo/HooksMemo"
 import HooksCallback from "../Components/React-Hooks/HooksCallback/HooksCallback";
 import MultipleStateIntoReducer from "../Components/React-Hooks/HooksReducer/MultipleStateIntoReducer";

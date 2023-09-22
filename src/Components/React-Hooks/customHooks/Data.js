@@ -1,7 +1,7 @@
 import React from 'react'
 import { useInput } from './useInput'
 
-export const Data = () => {
+ const Data = () => {
           const triggerCustomHooks=useInput()
   return (
             <div className='p-4'>
@@ -10,3 +10,5 @@ export const Data = () => {
     </div>
   )
 }
+
+export default Data

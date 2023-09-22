@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-const routes = [
+const render = [
           { path: '/', text: 'HomePage' },
           { path: '/contact', text: 'Contact' },
           { path: '/about', text: 'About' },
@@ -32,12 +32,13 @@ const NavBarShort = () => {
                     <div className='bg-[#0D0D0D] w-full h-[100px]'>
                               <div className='flex justify-between'>
                                         <ul className='text-16px cursor-pointer text-[#FFFFFF] font-bold flex px-8 pt-6'>
-                                                  {routes.map((route) => (
-                                                            <li key={route.path} className='px-2 hover:text-[#35BDD0]'>
-                                                                      <NavLink to={route.path} activeClassName='text-[#E21717]'>
-                                                                                {route.text}
-                                                                      </NavLink>
-                                                            </li>
+                                                  {render.map((item, index) => (
+                                                             <NavLink to={item.path} activeClassName='text-[#E21717]'>
+                                                            <li key={item.path} className='px-2 hover:text-[#35BDD0]'>
+                                                                     
+                                                                                {item.text}
+                                                                     
+                                                            </li> </NavLink>
                                                   ))}
                                         </ul>
                               </div>

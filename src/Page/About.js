@@ -1,12 +1,10 @@
 import React from 'react'
-import { NavBar } from '../Components/NavBar/NavBar'
-import{ logger} from "../logger"
+import { logger } from "../logger"
 const About = () => {
-          
           logger("component re-render")
           return (
                     <div>
-                              <NavBar />
+
                               <h1 className='text-[32px] pt-4 flex flex-row justify-center font-bold'>Welcome to About Page Ram</h1>
 
                     </div>

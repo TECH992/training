@@ -27,8 +27,6 @@ import Update from "../Components/LifeCycleMethod/Update";
 import ContactChils1 from '../Page/ContactChils1';
 import ContactChild2 from '../Page/ContactChild2';
 import ChildId from '../Page/ChildId';
-
-
 //import ParamsData from '../Page/ParamsData';
 const AllRouters = () => {
 

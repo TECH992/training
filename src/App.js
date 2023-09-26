@@ -8,8 +8,8 @@ function App(props) {
 
   return (
     <div>
-      {/* <NavBar/> */}
-      <NavBarShort/>
+      <NavBar/>
+      {/* <NavBarShort/> */}
       <Routers/>
       {/* <RoutesUsingHooks /> */}
     </div>

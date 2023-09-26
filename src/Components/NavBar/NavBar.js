@@ -1,18 +1,36 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const NavBar = (props) => {
+          let data = {
+                    "included": [
+                              {
+                                        "type": "people",
+                                        "id": "42",
+                                        "attributes": {
+                                                  "name": "John",
+                                                  "age": 80,
+                                                  "gender": "male"
+                                        }
+                              }
+                    ]
+          }
+
+        
           return (
                     <div>
-                              <div className='bg-[#0D0D0D] w-full h-16'>
+                              <div className='bg-[#0D0D0D] w-full h-16' >
                                         <div className='flex flex-row justify-between'>
                                                   <ul className='text-16 cursor-pointer text-white font-bold flex flex-row justify-end px-8 pt-6'>
-                                                            <Link to="/" state={{ from: "occupation" }}>
+                                                            <NavLink to="/" style={({ isActive }) => ({
+                                                                      color: isActive ? "#E21717" : "",
+                                                                      textDecoration: isActive?'underline':""
+                                                            })} state={data}>
                                                                       <li className='px-4 hover:text-[#35BDD0]'>
                                                                                 Home
                                                                       </li>
-                                                            </Link>
-                                                            <Link to="/contact" state={{ from: "occupation" }}>
+                                                            </NavLink>
+                                                            <Link to="/contact" state={"occupation"}>
                                                                       <li className='px-2 hover:text-[#35BDD0]'>
                                                                                 Contact
                                                                       </li>
@@ -102,7 +120,18 @@ const NavBar = (props) => {
                                                                                 Update
                                                                       </li>
                                                             </Link>
-                                                            <Link to="/Callback">
+                                                            <Link to="/reg">
+                                                                      <li className='px-2 hover:text-[#35BDD0]'>
+                                                                                Registration
+                                                                      </li>
+                                                            </Link>
+                                                            <Link onClick={() => alert("please come from registration page, I can't find your details and the page may break.")}>
+                                                                      <li className='px-2 hover:text-[#35BDD0]'>
+                                                                                Profile
+                                                                      </li>
+                                                            </Link>
+
+                                                            {/* <Link to="/Callback">
                                                                       <li className='px-2 hover:text-[#35BDD0]'>
                                                                                 HooksCallback
                                                                       </li>
@@ -111,7 +140,7 @@ const NavBar = (props) => {
                                                                       <li className='px-2 hover:text-[#35BDD0]'>
                                                                                 MultipleStateIntoReducer
                                                                       </li>
-                                                            </Link>
+                                                            </Link> */}
                                                   </ul>
                                         </div>
                               </div>

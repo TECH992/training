@@ -27,6 +27,8 @@ import Update from "../Components/LifeCycleMethod/Update";
 import ContactChils1 from '../Page/ContactChils1';
 import ContactChild2 from '../Page/ContactChild2';
 import ChildId from '../Page/ChildId';
+import Registration from '../Page/Registration';
+import Profile from '../Page/Profile';
 //import ParamsData from '../Page/ParamsData';
 const AllRouters = () => {
 
@@ -69,7 +71,9 @@ const AllRouters = () => {
                               <Route path='/Mount' element={<Mount />} />
                               <Route path='/Unmount' element={<Unmount />} />
                               <Route path='/Update' element={<Update />} />
-                              <Route path='*' element={<NotFoundPage />} />
+                              <Route path='/reg' element={<Registration />} />
+                              <Route path='/profile' element={<Profile />} />
+                              <Route path='*' element={<Navigate to="/" state={"occupation"}/>} />
                     </Routes>
 
           )

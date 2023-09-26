@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.active{
+/* .active{
           color: #0361A8 !important;
+} */
+
+.center{
+          @apply flex flex-row justify-center
 }

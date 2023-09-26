@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import  fetchData  from '../Service/fetchData'
 const Registration = () => {
 
   const [formData, setFormData] = useState({
@@ -8,8 +8,8 @@ const Registration = () => {
     email: '',
     password: '',
   });
-  
-  
+
+
   let navigate = useNavigate()
 
   const handleInputChange = (e) => {
@@ -19,7 +19,7 @@ const Registration = () => {
     setFormData({
       ...formData,
       [name]: value
-     
+
     });
   };
 
@@ -34,6 +34,20 @@ const Registration = () => {
 
 
   };
+
+  React.useEffect(() => {
+    fetchData("https://dummyjson.com/products?limit=100")
+      .then(data => {
+        // Handle the API data here
+        console.log('API data:', data);
+      })
+      .catch(error => {
+        // Handle errors
+        console.error('Error:', error);
+      });
+  })
+
+
 
   return (
     <div>

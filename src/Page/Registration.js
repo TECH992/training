@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import  fetchData  from '../Service/fetchData'
+import fetchData from '../Service/fetchData'
+import {UserAuth} from "../Context/AuthContext"
+import { useContext } from 'react';
 const Registration = () => {
 
   const [formData, setFormData] = useState({
@@ -8,8 +10,9 @@ const Registration = () => {
     email: '',
     password: '',
   });
-
-
+  const [error, setError] = useState('');
+  const { createUser } = UserAuth();;
+  console.log(createUser)
   let navigate = useNavigate()
 
   const handleInputChange = (e) => {
@@ -24,10 +27,18 @@ const Registration = () => {
   };
 
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     if (formData !== null && typeof formData === 'object') {
-      console.log(formData);
+      setError('')
+      try {
+        await createUser(formData.email, formData.password)
+        localStorage.setItem("CreatedOn", new Date())
+      } catch (e) {
+        setError(e.message)
+        console.log(e.message)
+      }
+  
       navigate("/profile", { state: { formData: formData } });
     }
 

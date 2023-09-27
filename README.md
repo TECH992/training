@@ -53,15 +53,15 @@
     }
   }, []); // Empty dependency array to run this effect only once
 ## ---------------------React-Router------------
-useNavigate() (state (state we are using data transefering through route ), path)
-usePrams(it will help you to access data from urlParameter)
-useLocation()(using retrieve state (state we are using data transferring through route ) Value from router)
-useRouter() (Create Router)
-Navigate (redirect to any route,state (state we are using data transferring through route ))
-BrowserRouter
-outlet(inject children into parent using  nesting route)
-Route (create route, have to props 1. path=define your route path. 2.Element:here you have to define your component. whenever you call route path . it will render your defined element component)
-Routes(define or Wrap all route inside route)
-NavLink (sate, to( to will help to redirect using path), style((isActive)),)
-Link(state, to( to will help to redirect using path) style((isActive)))
-Nesting Route(Call Route inside Route)
+`useNavigate() (state (state we are using data transefering through route ), path)`
+`usePrams(it will help you to access data from urlParameter)`
+`useLocation()(using retrieve state (state we are using data transferring through route ) Value from router)`
+`useRouter() (Create Router)`
+`Navigate (redirect to any route,state (state we are using data transferring through route ))`
+`BrowserRouter`
+`outlet(inject children into parent using  nesting route)`
+`Route (create route, have to props 1. path=define your route path. 2.Element:here you have to define your component. whenever you call route path . it will render your defined element component)`
+`Routes(define or Wrap all route inside route)`
+`NavLink (sate, to( to will help to redirect using path), style((isActive)),)`
+`Link(state, to( to will help to redirect using path) style((isActive)))`
+`Nesting Route(Call Route inside Route)`

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import  fetchData  from '../Service/fetchData'
+import fetchData from '../Service/fetchData'
+import  {fetchDataWithAxios}  from '../Service/fetchDataWithAxios'
+
 const Registration = () => {
 
   const [formData, setFormData] = useState({
@@ -36,17 +38,25 @@ const Registration = () => {
   };
 
   React.useEffect(() => {
-    fetchData("https://dummyjson.com/products?limit=100")
-      .then(data => {
-        // Handle the API data here
-        console.log('API data:', data);
-      })
-      .catch(error => {
-        // Handle errors
-        console.error('Error:', error);
-      });
+    // fetchData("https://dummyjson.com/products?limit=100")
+    //   .then(data => {
+    //     // Handle the API data here
+    //     console.log('API data:', data);
+    //   })
+    //   .catch(error => {
+    //     // Handle errors
+    //     console.error('Error:', error);
+    //   });
+    fetchDataFromAPI()
   })
-
+  const fetchDataFromAPI = async () => {
+    try {
+      const data = await fetchDataWithAxios("https://dummyjson.com/products?limit=100");
+      console.log(data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
 
   return (

@@ -47,7 +47,7 @@ const Registration = () => {
     //     // Handle errors
     //     console.error('Error:', error);
     //   });
-    fetchDataFromAPI()
+   
   })
   const fetchDataFromAPI = async () => {
     try {

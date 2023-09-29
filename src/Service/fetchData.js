@@ -1,4 +1,5 @@
 export default async function fetchData(apiUrl) {
+          console.log("url",apiUrl)
           try {
                     const response = await fetch(apiUrl);
 

@@ -29,28 +29,28 @@ import ApiData from './ApiFetching/ApiData';
 //     ]
 //   }
 // ])
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path='/' element={<App />}>
-      <Route path='' element={<Home />} />
-      <Route path='about' element={<About />} />
-      <Route path='contact' element={<Contact />} />
+// const router = createBrowserRouter(
+//   createRoutesFromElements(
+//     <Route path='/' element={<App />}>
+//       <Route path='' element={<Home />} />
+//       <Route path='about' element={<About />} />
+//       <Route path='contact' element={<Contact />} />
       
-      <Route 
-      loader={""}
-      path='github' 
-      element={<ApiData />}
-       />
-    </Route>
-  )
-)
+//       <Route 
+//       loader={""}
+//       path='github' 
+//       element={<ApiData />}
+//        />
+//     </Route>
+//   )
+// )
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
-    {/* <BrowserRouter>
+    {/* <RouterProvider router={router} /> */}
+    <BrowserRouter>
       <App />
-    </BrowserRouter> */}
+    </BrowserRouter>
    
   </React.StrictMode>
 );

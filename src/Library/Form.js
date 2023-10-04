@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef ,useState} from 'react'
 import { useForm } from "react-hook-form";
 import contact from "../image/laptop-and-email-12472.svg";
 import emailjs from "@emailjs/browser";
@@ -9,22 +9,30 @@ const Form = () => {
 
           //* formState.errors: This property contains information about validation errors for the form inputs
 
-          const { register, handleSubmit, formState: { errors }, } = useForm();
+          const { register, handleSubmit,reset, formState: { errors }, } = useForm();
 
           const form = useRef();
 
+          const[show,setShow]=useState(false)
+
           const sendEmail = (data) => {
+          console.log(data)
 
                     //let formValue=data
                     emailjs.sendForm(
-                                        "service_90zxdlr",
-                                        "template_r4wfipn",
+                         "service_90zxdlr",
+                              //process.env.React_App_ApiKey,
+                               "template_r4wfipn",
+                             // process.env.React_App_authDomain,
                                         form.current,
-                                        "2LL6D93W2vkJQjY7E"
+                               "2LL6D93W2vkJQjY7E"
+                              //process.env.React_App_projectId,
                               )
                               .then(
                                         (result) => {
                                                   if (result.status === 200) {
+                                                            setShow(true)
+                                                            reset()
                                                             console.log("result", result)
                                                   }
                                         },
@@ -180,6 +188,9 @@ const Form = () => {
                                                                       <p className="error">Alphabetical characters only</p>
                                                             )}
                                                             <input type="submit" className="mt-6" value="Send Message " />
+                                                            {show && (
+                                                                  <p className="sucess">Your Form have submited</p>     
+                                                            )}
                                                   </form>
                                         </div>
                               </div>

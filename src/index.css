@@ -91,3 +91,9 @@ textarea {
   color: #30dada;
   border-bottom: 2px solid #30dada !important ;
 }
+.sucess{
+          color: #1C8D73;
+          display:flex !important;
+          justify-content: center !important;
+          font-size:24px !important;
+}

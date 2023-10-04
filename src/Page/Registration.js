@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import fetchData from '../Service/fetchData'
-import {UserAuth} from "../Context/AuthContext"
+//import {UserAuth} from "../Context/AuthContext"
+import {UserContext} from "../Context/AuthContext"
 import { useContext } from 'react';
 const Registration = () => {
 
@@ -11,14 +12,19 @@ const Registration = () => {
     password: '',
   });
   const [error, setError] = useState('');
-  const { createUser } = UserAuth();;
-  console.log(createUser)
+
+  // const { createUser } = UserAuth();;
+  // console.log(createUser)
+const first = useContext(UserContext)
+console.log(first)
+
+
   let navigate = useNavigate()
 
   const handleInputChange = (e) => {
 
     const { name, value } = e.target;
-    console.log(e.target.name)
+    //console.log(e.target.name)
     setFormData({
       ...formData,
       [name]: value
@@ -32,7 +38,7 @@ const Registration = () => {
     if (formData !== null && typeof formData === 'object') {
       setError('')
       try {
-        await createUser(formData.email, formData.password)
+        // await createUser(formData.email, formData.password)
         localStorage.setItem("CreatedOn", new Date())
       } catch (e) {
         setError(e.message)

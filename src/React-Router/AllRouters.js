@@ -29,6 +29,7 @@ import ContactChild2 from '../Page/ContactChild2';
 import ChildId from '../Page/ChildId';
 import Registration from '../Page/Registration';
 import Profile from '../Page/Profile';
+import Form from '../Library/Form';
 //import ParamsData from '../Page/ParamsData';
 const AllRouters = () => {
 
@@ -73,6 +74,7 @@ const AllRouters = () => {
                               <Route path='/Update' element={<Update />} />
                               <Route path='/reg' element={<Registration />} />
                               <Route path='/profile' element={<Profile />} />
+                              <Route path="hooksForm" element={<Form/>}/>
                               <Route path='*' element={<Navigate to="/" state={"occupation"}/>} />
                     </Routes>
 

@@ -9,3 +9,85 @@
 .center{
           @apply flex flex-row justify-center
 }
+#subject {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid #30dada;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: black;
+  border-radius: 24px;
+  color: white;
+  box-shadow: 1px 1px 1px 6px lightblue;
+}
+#fullName {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid #30dada;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: black;
+  border-radius: 24px;
+  color: white;
+  box-shadow: 1px 1px 1px 6px lightblue;
+}
+#lastName {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid #30dada;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: black;
+  border-radius: 24px;
+  color: white;
+  box-shadow: 1px 1px 1px 6px lightblue;
+}
+input[type="submit"] {
+  width: 100%;
+  background-color: #000000;
+  color: white;
+  padding: 4px 4px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  font-size: 24px;
+  border: 2px solid #30dada;
+  margin-top: 30px !important;
+  box-shadow: 1px 1px 1px 6px lightblue;
+}
+textarea {
+  width: 100%;
+  background-color: white;
+  color: white;
+  padding: 4px 4px;
+  height: 134px;
+  border: none;
+  border-radius: 4px;
+  background-color: black;
+  border: "4px solid #30dada";
+  border-radius: 24px;
+  box-shadow: 1px 0px 0px 10px lightblue;
+}
+#text {
+  background-color: black;
+  border: 2px solid #30dada;
+}
+.error {
+  color: #bf1650;
+}
+
+.error::before {
+  display: inline;
+  content: "⚠ ";
+}
+.hover:hover {
+  color: #30dada;
+  border-bottom: 2px solid #30dada !important ;
+}

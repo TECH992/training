@@ -30,7 +30,19 @@ import ChildId from '../Page/ChildId';
 import Registration from '../Page/Registration';
 import Profile from '../Page/Profile';
 //import ParamsData from '../Page/ParamsData';
+import { fetchDataWithAxios } from "../Service/fetchDataWithAxios"
+import fetchData from "../Service/fetchData"
 const AllRouters = () => {
+          const fetchDataFromAPI = async () => {
+                    try {
+                      const data = await fetchData("https://dummyjson.com/products?limit=100");
+                      console.log("data", data);
+                      return data; // Return the data fetched from the API
+                    } catch (error) {
+                      console.error(error);
+                      return null; // Return null or an appropriate value in case of an error
+                    }
+                  };
 
           return (
                     <Routes>
@@ -64,16 +76,17 @@ const AllRouters = () => {
 
                               <Route path='Todo' element={<Todos />} />
                               <Route path='/Button' element={<Button />} />
-                              <Route path='/Data' element={<Data />} />
+                              <Route path='/Data'   loader={fetchDataFromAPI} element={<Data />} />
                               <Route path='/HooksMemo' element={<HooksMemo />} />
                               <Route path='/Callback' element={<HooksCallback />} />
                               <Route path='/MultipleStateIntoReducer' element={<MultipleStateIntoReducer />} />
                               <Route path='/Mount' element={<Mount />} />
                               <Route path='/Unmount' element={<Unmount />} />
                               <Route path='/Update' element={<Update />} />
-                              <Route path='/reg' element={<Registration />} />
+                              <Route path='/reg' loader={fetchDataFromAPI} element={<Registration />} />
+
                               <Route path='/profile' element={<Profile />} />
-                              <Route path='*' element={<Navigate to="/" state={"occupation"}/>} />
+                              <Route path='*' element={<Navigate to="/" state={"occupation"} />} />
                     </Routes>
 
           )

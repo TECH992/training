@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import fetchData from '../Service/fetchData'
 import  {fetchDataWithAxios}  from '../Service/fetchDataWithAxios'
 
-const Registration = () => {
+const Registration = (props) => {
+console.log(props)
+  ///const data = useLoaderData()
+   ///console.log(data)
 
   const [formData, setFormData] = useState({
     name: '',

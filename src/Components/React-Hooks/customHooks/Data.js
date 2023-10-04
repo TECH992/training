@@ -1,7 +1,9 @@
 import React from 'react'
 import { useInput } from './useInput'
+import {useLoaderData} from "react-router-dom"
 
- const Data = () => {
+const Data = () => {
+  const data = useLoaderData()
           const triggerCustomHooks=useInput()
   return (
             <div className='p-4'>

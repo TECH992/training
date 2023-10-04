@@ -16,13 +16,10 @@ export default function About() {
                                                                       React development is carried out by passionate developers
                                                             </h2>
                                                             <p className="mt-6 text-gray-600">
-                                                                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum omnis voluptatem
-                                                                      accusantium nemo perspiciatis delectus atque autem! Voluptatum tenetur beatae unde
-                                                                      aperiam, repellat expedita consequatur! Officiis id consequatur atque doloremque!
+                                                            : React developers primarily focus on building the user interface of web applications. They create reusable UI components that can be combined to create complex UIs. React uses a component-based architecture, which makes it easier to manage and maintain UI code.
                                                             </p>
                                                             <p className="mt-4 text-gray-600">
-                                                                      Nobis minus voluptatibus pariatur dignissimos libero quaerat iure expedita at?
-                                                                      Asperiores nemo possimus nesciunt dicta veniam aspernatur quam mollitia.
+                                                            React developers need a strong understanding of JavaScript, as React is a JavaScript library. They should be familiar with ES6+ features, asynchronous programming, and the concepts of JavaScript development.
                                                             </p>
                                                   </div>
                                         </div>

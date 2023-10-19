@@ -5,7 +5,9 @@
 /* .active{
           color: #0361A8 !important;
 } */
-
+body{
+    @apply bg-[#000]
+}
 .center{
           @apply flex flex-row justify-center
 }
